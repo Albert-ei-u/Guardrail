@@ -1,12 +1,33 @@
 {
-  "name": "guardrail",
+  "name": "@albert-ei-u/guardrail",
   "version": "1.0.0",
-  "description": "Automated Security Shield & Prober",
+  "description": "Automated Security Shield & Prober powered by Rust",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "start": "node test-server.js",
     "probe": "node prober.js",
     "build:core": "wasm-pack build --target nodejs"
+  },
+  "keywords": [
+    "security",
+    "rasp",
+    "protection",
+    "middleware",
+    "rust",
+    "wasm",
+    "sqli",
+    "xss"
+  ],
+  "author": "Albert",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albert-ei-u/Guardrail.git"
   },
   "dependencies": {
     "express": "^4.18.2",

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardrail | Security Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <header>
+            <div class="logo-section">
+                <span class="shield-icon">🛡️</span>
+                <h1>GUARDRAIL <span class="badge">CORE v1.0</span></h1>
+            </div>
+            <div class="system-status">
+                <span class="dot pulse"></span>
+                SYSTEM ACTIVE & PROTECTING
+            </div>
+        </header>
+
+        <main>
+            <section class="top-row">
+                <div class="card stat-card">
+                    <h3>ROBUSTNESS SCORE</h3>
+                    <div class="score-display">
+                        <span id="score-value">0</span><span class="percent">%</span>
+                    </div>
+                    <p>Calculated based on blocked vs. successful probes.</p>
+                </div>
+                <div class="card attack-panel">
+                    <h3>SECURE ATTACK SIMULATOR</h3>
+                    <div class="button-grid">
+                        <button onclick="simulate('safe')" class="btn secondary">Safe Request</button>
+                        <button onclick="simulate('sqli')" class="btn danger">SQL Injection</button>
+                        <button onclick="simulate('xss')" class="btn danger">XSS Attack</button>
+                        <button onclick="simulate('nosql')" class="btn danger">NoSQL Attack</button>
+                    </div>
+                    <p class="hint">Trigger a probe to see the shield in action.</p>
+                </div>
+            </section>
+
+            <section class="log-section card">
+                <div class="log-header">
+                    <h3>LIVE SECURITY LOGS</h3>
+                    <button onclick="clearLogs()" class="btn-text">Clear Logs</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Method</th>
+                                <th>Path</th>
+                                <th>Status</th>
+                                <th>Duration</th>
+                                <th>Outcome</th>
+                            </tr>
+                        </thead>
+                        <tbody id="event-log">
+                            <!-- Events will appear here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
