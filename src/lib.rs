@@ -58,3 +58,4 @@ pub fn check_payload(input: &str) -> JsValue {
 
     serde_json::to_value(&result).unwrap().into()
 }
+
