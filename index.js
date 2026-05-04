@@ -52,7 +52,6 @@ function guardrail(options = {}) {
             query: req.query,
             params: req.params
         });
-
         const result = checkPayload(payload);
 
         if (!result.isSafe) {
