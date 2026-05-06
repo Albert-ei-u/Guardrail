@@ -9,7 +9,7 @@
 - **Rust Core**: A memory-safe, ultra-fast security engine that compiles to WebAssembly for cross-language compatibility.
 - **Agnostic Design**: Built to eventually support Node.js, Python, Go, and more using a unified Rust-based logic.
 
-## 🚀 Quick Start
+## 🚀 Quick Start 
 
 ### 1. Installation
 ```bash
