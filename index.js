@@ -56,7 +56,6 @@ function guardrail(options = {}) {
         const result = checkPayload(payload);
 
         if (!result.isSafe) {
-            
             console.error(`[GUARDRAIL ALERT] ${result.attackType} detected!`);
             
             if (options.block === false) {
