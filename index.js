@@ -47,12 +47,13 @@ function checkPayload(input) {
  */
 function guardrail(options = {}) {
     return (req, res, next) => {
-
+        
         const payload = JSON.stringify({
             body: req.body,
             query: req.query,
             params: req.params
         });
+
 
         const result = checkPayload(payload);
 
