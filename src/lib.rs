@@ -9,6 +9,7 @@ pub struct SecurityResult {
     pub attack_type: Option<String>,
 }
 
+
 #[wasm_bindgen]
 pub fn check_payload(input: &str) -> JsValue {
     let mut result = SecurityResult {
