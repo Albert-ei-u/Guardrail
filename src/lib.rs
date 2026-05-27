@@ -45,7 +45,6 @@ pub fn check_payload(input: &str) -> JsValue {
             return serde_json::to_value(&result).unwrap().into();
         }
     }
-
     
 
 
