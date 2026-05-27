@@ -45,9 +45,8 @@ pub fn check_payload(input: &str) -> JsValue {
             return serde_json::to_value(&result).unwrap().into();
         }
     }
+
     
-
-
 
     for pattern in xss_patterns.iter() {
         let re = Regex::new(pattern).unwrap();
