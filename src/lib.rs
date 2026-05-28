@@ -47,6 +47,7 @@ pub fn check_payload(input: &str) -> JsValue {
     }
 
     
+
     for pattern in xss_patterns.iter() {
         let re = Regex::new(pattern).unwrap();
         if re.is_match(input) {
